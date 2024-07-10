@@ -1,2 +1,2 @@
 all:
-	cc test.c Utransmitter.c alsa/alsa.c -lm -g -lasound
+	cc iface.c Utransmitter.c alsa/alsa.c -lm -lasound -o utx

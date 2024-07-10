@@ -14,8 +14,10 @@ unsigned int playback_sample_rate=48000;
 
 int alsa_buffer_size=0;
 
-int setup_alsa(char* recordf, char* playbackf, int buffer_size){//we won't be using microphone until later version
+int setup_alsa(char* recordf, char* playbackf, int buffer_size, int sampler){//we won't be using microphone until later version
 	int frames=1;
+  record_sample_rate = sampler;
+  playback_sample_rate = sampler;
   alsa_buffer_size = buffer_size;
 	if ( snd_pcm_open(&playback, playbackf,SND_PCM_STREAM_PLAYBACK, 0) < 0){		
 		printf("unable to open playback interface\n");

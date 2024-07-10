@@ -1,7 +1,7 @@
 #ifndef UTX
 #define UTX
 
-void amplitude_modulate(short* input, short* output, int length, float frequency);
+void amplitude_modulate(short* input, short* output, int length, float frequency, double gain);
 
 void amplitude_demodulate(short* input, short* output, int length, float frequency, double gain);
 
